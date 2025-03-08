@@ -47,6 +47,13 @@ body{
     transition: .5s;
 }
 
+html, body {
+    overflow-x: hidden; /* Oculta cualquier desbordamiento horizontal */
+    width: 100%;
+    max-width: 100vw;
+}
+
+
 .header.sticky {
     background: var(--bg-color);
     box-shadow: 0 .1rem 1rem var(--shadow-color);
@@ -812,17 +819,3 @@ span{
     }
 }
 
-@media (max-width: 365px){
-    .about-img img{
-        width: 90vw;
-    }
-
-    .footer{
-        flex-direction: column-reverse;
-    }
-
-    .footer p{
-        text-align: center;
-        margin-top: 2rem;
-    }
-}
