@@ -786,7 +786,7 @@ span{
     }
 
     .home .profession-box .profession:nth-child(1){
-        transform: rotate(-90deg) translate(0px, -335px);
+        transform: rotate(-90deg) translate(-98px, -220px);
     }
 
     .home .profession-box .profession:nth-child(2){
