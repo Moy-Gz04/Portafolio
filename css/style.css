@@ -281,17 +281,23 @@ section{
     height: 0;
     border-top: 384px solid var(--main-color) ;
     border-right: 384px solid var(--main-color);
-    border-bottom: 384px solid var(--main-color) ;
+    border-bottom: 385px solid var(--main-color) ;
     border-left: 384px solid transparent;
 }
 
-.home-img img{
-    position: absolute;
+.home-img img {
+    position: absolute; /* Asegura que la imagen esté en la posición correcta */
     bottom: 0;
     right: 0;
-    width: 100%;
-    pointer-events: none;
+    width: 45%; /* Ajusta según sea necesario */
+    height: 100%; /* Evita que la imagen se deforme */
+    object-fit: cover; /* Asegura que la imagen cubra el espacio necesario */
 }
+
+.home-img img {
+    bottom: -13px; /* Prueba con valores negativos si es necesario */
+}
+
 
 span{
     color: var(--main-color)
