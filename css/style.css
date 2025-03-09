@@ -474,6 +474,58 @@ span{
     margin-bottom: 3rem;
 }
 
+.contact p{
+    font-size: 1.6rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.aaa {
+    display: flex;
+    justify-content: center; /* Centra los iconos horizontalmente */
+    gap: 1.5rem; /* Espacio entre los iconos */
+    margin-top: 1.5rem; /* Espaciado superior */
+}
+
+.aaa a {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra los iconos horizontalmente */
+    width: 40px; /* Tamaño del contenedor */
+    height: 40px;
+    background-color: var(--main-color); /* Fondo azul para los iconos */
+    color: white; /* Color del icono */
+    font-size: 2.5rem; /* Tamaño del icono */
+    border-radius: 25%; /* Hace que los iconos sean circulares */
+    transition: all 0.3s ease-in-out; /* Suaviza los efectos de hover */
+    text-decoration: none; /* Elimina subrayado en enlaces */
+}
+
+.aaa a i {
+    font-size: 2.5rem; /* Tamaño del icono */
+    color: white; /* Asegura que el icono sea visible */
+    transition: transform 0.3s ease-in-out;
+}
+
+.aaa a:hover {
+    background-color: var(--main-color); /* Cambia de color al pasar el mouse */
+    transform: scale(1.1); /* Hace que el icono crezca un poco */
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Efecto de brillo */
+}
+
+.aaa a:hover i {
+    transform: scale(1.2); /* Agranda solo el icono */
+}
+
+.social-text {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 0.5rem; /* Espaciado entre el texto y los iconos */
+    text-align: center;
+}
+
+
+
 .contact form{
     max-width: 70rem;
     margin: 1rem auto;
@@ -817,5 +869,84 @@ span{
     .contact form .input- box input {
         width: 100%;
     }
+}
+
+/* css ventana emergente */
+/* 🔹 Caja del modal con mejor distribución interna */
+/* 🔹 Modal mejorado con centrado absoluto */
+.modal {
+    display: none;
+    position: fixed; /* Asegura que esté sobre todo */
+    z-index: 1000;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); /* Centra el modal perfectamente */
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 🔹 Caja del modal */
+.modal-content {
+    background: var(--white-color);
+    padding: 3rem 2rem;
+    border-radius: 15px;
+    text-align: center;
+    width: 90%;
+    max-width: 350px;
+    height: 420px; /* Ajusta la altura según el contenido */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* 🔹 Icono más centrado y con más espacio */
+.modal-content i {
+    font-size: 10rem; /* Un poco más grande */
+    color: var(--main-color);
+    margin-bottom: 1.2rem;
+}
+
+/* 🔹 Título más llamativo y con mayor separación */
+.modal-content h2 {
+    font-size: 4rem;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    margin-bottom: 3rem;
+}
+
+/* 🔹 Texto con mejor alineación y mayor legibilidad */
+.modal-content p {
+    font-size: 1.6rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+/* 🔹 Botón con mejor padding y más impacto */
+.btn {
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    padding: 14px 24px;
+    font-size: 1.6rem;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--white-color);
+    color: var(--main-color);
+    border: 3px solid var(--main-color);
+    border-radius: 12px;
 }
 

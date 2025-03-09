@@ -11,10 +11,22 @@
     <!-- custom css -->
     <link rel="stylesheet" href="css/style.css">
 </head>
+
+<!-- Modal de confirmación mejorado -->
+<div id="success-modal" class="modal">
+    <div class="modal-content">
+        <i class='bx bx-happy-beaming'></i> <!-- Icono grande -->
+        <h2>Message Sent Successfully!</h2>
+        <p>Thank you for reaching out! I have received your message and will be in touch with you shortly.</p>
+        <button id="close-modal" class="btn">OK</button>
+    </div>
+</div>
+
+
 <body>
     <!-- header design -->
      <header class="header">
-        <a href="" class="logo">Portafolio.</a>
+        <a href="" class="logo">Portfolio.</a>
 
         <nav class="navbar">
             <a href="#home" class="active">Home</a>
@@ -32,10 +44,10 @@
      home section design -->
      <section class="home" id="home">
         <div class="home-content">
-           <h3>Hello, I am</h3>
-           <h1>Moises Gomez</h1> 
-           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis repellendus ea dolor deleniti cupiditate voluptas nam accusantium necessitatibus neque suscipit 
-            consequatur ab ut id, amet in quibusdam. Veritatis, cum tempore!</p>
+           <h3>Hello, <span>I am</span></h3>
+           <h1>Juan Moisés Gómez Aispuro</h1> 
+           <p>Building modern web applications with innovation and efficiency. Passionate about 
+            technology, problem-solving, and continuous learning.</p>
             <div class="social-media">
                 <a href=""><i class='bx bxl-facebook'></i></a>
                 <a href=""><i class='bx bxl-instagram'></i></a>
@@ -86,10 +98,18 @@
         </div>
 
         <div class="about-content">
-            <h2 class="heading">About <span>Me</span></h2>
-            <head>Hi, I´m Her To Help Your Next Project!</head>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, suscipit ipsam, commodi molestias et debitis fugit, incidunt tempore maxime molestiae quaerat. Reiciendis, molestiae fugiat aspernatur iure veritatis facere, pariatur optio debitis ducimus recusandae non a? Et ea ipsum labore sapiente.</p>
-            <a href="" class="btn">Read More</a>
+            <h2 class="heading"> <span><i class='bx bx-code-alt'></i></span> About <span>Me</span></h2>
+            
+            <p>Hi, I'm Juan Moisés Gómez Aispuro, a Computer Systems Engineering student with a strong
+               passion for web development and technology
+                <br><br>
+                I thrive on solving complex problems, continuously learning new technologies, and developing 
+                innovative digital solutions. Whether it’s frontend design or backend architecture, 
+                I aim to create seamless and efficient experiences.
+                <br><br>  
+                Currently, I'm exploring cloud computing and database optimization to enhance scalability 
+                in web applications. Let’s connect and collaborate on exciting projects!</p>
+            <a href="#contact" class="btn">Work With Me!</a>
         </div>
       </section>
 
@@ -192,21 +212,40 @@
       <!-- contact section design -->
        <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Me!</span></h2>
+        <p>Let's collaborate! Whether you have a project, a question, or just want to 
+        connect, feel free to reach out.<br> I'm always open to exciting opportunities!</p>
 
-        <form action="#">
-            <div class="input-box">
-                <input type="text" placeholder="Full Name">
-                <input type="email" placeholder="Email Address">
+
+
+            <div class="aaa">
+                <a href=""><i class='bx bxl-facebook'></i></a>
+                <a href=""><i class='bx bxl-instagram'></i></a>
+                <a href=""><i class='bx bxl-linkedin'></i></a>
             </div>
 
-            <div class="input-box">
-                <input type="number" placeholder="Mobile Number">
-                <input type="text" placeholder="Email Subject">
-            </div>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
-            <input type="submit" value="Send Message" class="btn">
-        
-        </form>
+            <form action="https://formsubmit.co/jgomezaispuro@gmail.com" method="POST">
+                <div class="input-box">
+                    <input type="text" name="name" placeholder="Full Name" required>
+                    <input type="email" name="email" placeholder="Email Address" required>
+                </div>
+            
+                <div class="input-box">
+                    <input type="number" name="phone" placeholder="Mobile Number" required>
+                    <input type="text" name="subject" placeholder="Email Subject" required>
+                </div>
+            
+                <textarea name="message" placeholder="Your Message" required></textarea>
+            
+                <!-- Para redirigir después de enviar -->
+                <input type="hidden" name="_next" value="https://tuportafolio.com/gracias.html">
+                
+                <!-- Para evitar SPAM -->
+                <input type="hidden" name="_captcha" value="false">
+            
+                <input type="submit" value="Send Message" class="btn">
+            </form>
+            
+            
        </section>
 
        <!-- footer design -->
